@@ -129,6 +129,26 @@ architecture rtl of vga_controller is
 	
 	constant basis_c : basis_color_t := ( X"01", X"02", X"04", X"08" );
 
+--	static const rgb_t apple2_palette[] =
+--{
+--	RGB_BLACK,
+--	MAKE_RGB(0xE3, 0x1E, 0x60), /* Dark Red */
+--	MAKE_RGB(0x60, 0x4E, 0xBD), /* Dark Blue */
+--	MAKE_RGB(0xFF, 0x44, 0xFD), /* Purple */
+--	MAKE_RGB(0x00, 0xA3, 0x60), /* Dark Green */
+--	MAKE_RGB(0x9C, 0x9C, 0x9C), /* Dark Gray */
+--	MAKE_RGB(0x14, 0xCF, 0xFD), /* Medium Blue */
+--	MAKE_RGB(0xD0, 0xC3, 0xFF), /* Light Blue */
+--	MAKE_RGB(0x60, 0x72, 0x03), /* Brown */
+--	MAKE_RGB(0xFF, 0x6A, 0x3C), /* Orange */
+--	MAKE_RGB(0x9C, 0x9C, 0x9C), /* Light Grey */
+--	MAKE_RGB(0xFF, 0xA0, 0xD0), /* Pink */
+--	MAKE_RGB(0x14, 0xF5, 0x3C), /* Light Green */
+--	MAKE_RGB(0xD0, 0xDD, 0x8D), /* Yellow */
+--	MAKE_RGB(0x72, 0xFF, 0xD0), /* Aquamarine */
+--	RGB_WHITE
+--};
+
 	signal ram_write_addr_s			: unsigned(10 downto 0);
 	signal ram_we_s					: std_logic;
 	signal ram_read_addr_s			: unsigned(10 downto 0);

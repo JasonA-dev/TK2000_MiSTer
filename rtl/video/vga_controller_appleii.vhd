@@ -58,6 +58,27 @@ architecture rtl of vga_controller_appleii is
 	constant basis_g : basis_color := ( X"BC", X"2C", X"E8", X"17" );  
 	constant basis_b : basis_color := ( X"1A", X"A5", X"BF", X"40" );	
 
+
+--	static const rgb_t apple2_palette[] =
+--{
+--	RGB_BLACK,
+--	MAKE_RGB(0xE3, 0x1E, 0x60), /* Dark Red */
+--	MAKE_RGB(0x60, 0x4E, 0xBD), /* Dark Blue */
+--	MAKE_RGB(0xFF, 0x44, 0xFD), /* Purple */
+--	MAKE_RGB(0x00, 0xA3, 0x60), /* Dark Green */
+--	MAKE_RGB(0x9C, 0x9C, 0x9C), /* Dark Gray */
+--	MAKE_RGB(0x14, 0xCF, 0xFD), /* Medium Blue */
+--	MAKE_RGB(0xD0, 0xC3, 0xFF), /* Light Blue */
+--	MAKE_RGB(0x60, 0x72, 0x03), /* Brown */
+--	MAKE_RGB(0xFF, 0x6A, 0x3C), /* Orange */
+--	MAKE_RGB(0x9C, 0x9C, 0x9C), /* Light Grey */
+--	MAKE_RGB(0xFF, 0xA0, 0xD0), /* Pink */
+--	MAKE_RGB(0x14, 0xF5, 0x3C), /* Light Green */
+--	MAKE_RGB(0xD0, 0xDD, 0x8D), /* Yellow */
+--	MAKE_RGB(0x72, 0xFF, 0xD0), /* Aquamarine */
+--	RGB_WHITE
+--};
+
 	signal shift_reg : unsigned(5 downto 0);  -- Last six pixels
 
 	signal last_hbl : std_logic;
